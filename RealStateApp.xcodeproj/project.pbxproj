@@ -14,6 +14,7 @@
 		648C0BA02B198ABD00A7FD30 /* RealStateAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648C0B9F2B198ABD00A7FD30 /* RealStateAppTests.swift */; };
 		648C0BAA2B198ABD00A7FD30 /* RealStateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648C0BA92B198ABD00A7FD30 /* RealStateAppUITests.swift */; };
 		648C0BAC2B198ABD00A7FD30 /* RealStateAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648C0BAB2B198ABD00A7FD30 /* RealStateAppUITestsLaunchTests.swift */; };
+		648C0BBA2B198ADE00A7FD30 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648C0BB92B198ADE00A7FD30 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		648C0BA52B198ABD00A7FD30 /* RealStateAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealStateAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		648C0BA92B198ABD00A7FD30 /* RealStateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealStateAppUITests.swift; sourceTree = "<group>"; };
 		648C0BAB2B198ABD00A7FD30 /* RealStateAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealStateAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		648C0BB92B198ADE00A7FD30 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		648C0B8D2B198ABB00A7FD30 /* RealStateApp */ = {
 			isa = PBXGroup;
 			children = (
+				648C0BB82B198ACE00A7FD30 /* Views */,
 				648C0B8E2B198ABB00A7FD30 /* RealStateAppApp.swift */,
 				648C0B902B198ABB00A7FD30 /* ContentView.swift */,
 				648C0B922B198ABD00A7FD30 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				648C0BAB2B198ABD00A7FD30 /* RealStateAppUITestsLaunchTests.swift */,
 			);
 			path = RealStateAppUITests;
+			sourceTree = "<group>";
+		};
+		648C0BB82B198ACE00A7FD30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				648C0BB92B198ADE00A7FD30 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				648C0BBA2B198ADE00A7FD30 /* HomeView.swift in Sources */,
 				648C0B912B198ABB00A7FD30 /* ContentView.swift in Sources */,
 				648C0B8F2B198ABB00A7FD30 /* RealStateAppApp.swift in Sources */,
 			);
