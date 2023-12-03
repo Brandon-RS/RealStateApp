@@ -17,6 +17,8 @@
 		648C0BAA2B198ABD00A7FD30 /* RealStateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648C0BA92B198ABD00A7FD30 /* RealStateAppUITests.swift */; };
 		648C0BAC2B198ABD00A7FD30 /* RealStateAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648C0BAB2B198ABD00A7FD30 /* RealStateAppUITestsLaunchTests.swift */; };
 		648C0BBA2B198ADE00A7FD30 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648C0BB92B198ADE00A7FD30 /* HomeView.swift */; };
+		64CD1C5D2B1C3CFF00D2BEF2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD1C5C2B1C3CFF00D2BEF2 /* LoginView.swift */; };
+		64CD1C602B1C3D3A00D2BEF2 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD1C5F2B1C3D3A00D2BEF2 /* Validators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		648C0BA92B198ABD00A7FD30 /* RealStateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealStateAppUITests.swift; sourceTree = "<group>"; };
 		648C0BAB2B198ABD00A7FD30 /* RealStateAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealStateAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		648C0BB92B198ADE00A7FD30 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		64CD1C5C2B1C3CFF00D2BEF2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		64CD1C5F2B1C3D3A00D2BEF2 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		648C0B8D2B198ABB00A7FD30 /* RealStateApp */ = {
 			isa = PBXGroup;
 			children = (
+				64CD1C5E2B1C3D2900D2BEF2 /* Utils */,
 				64093F7C2B1BFCA600BF0259 /* Widgets */,
 				648C0BB82B198ACE00A7FD30 /* Views */,
 				648C0B8E2B198ABB00A7FD30 /* RealStateAppApp.swift */,
@@ -148,8 +153,17 @@
 			isa = PBXGroup;
 			children = (
 				648C0BB92B198ADE00A7FD30 /* HomeView.swift */,
+				64CD1C5C2B1C3CFF00D2BEF2 /* LoginView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		64CD1C5E2B1C3D2900D2BEF2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				64CD1C5F2B1C3D3A00D2BEF2 /* Validators.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64CD1C5D2B1C3CFF00D2BEF2 /* LoginView.swift in Sources */,
+				64CD1C602B1C3D3A00D2BEF2 /* Validators.swift in Sources */,
 				648C0BBA2B198ADE00A7FD30 /* HomeView.swift in Sources */,
 				64093F802B1C049800BF0259 /* LineShape.swift in Sources */,
 				64093F7E2B1BFCD400BF0259 /* SignInButton.swift in Sources */,
