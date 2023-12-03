@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var email = ""
+    @State private var isEmailValid: Bool = true
+
+    @State private var password = ""
+    
     var body: some View {
-        var size = UIScreen.main.bounds.width
+        let size = UIScreen.main.bounds.width
         
         VStack{
             VStack{
@@ -40,7 +46,7 @@ struct HomeView: View {
                 
                 SignInButton(
                     text: "Apple",
-                    marginBottom: 30,
+                    marginBottom: 12,
                     onPressed: {
                         print("Using Apple")
                     }
@@ -51,19 +57,55 @@ struct HomeView: View {
                         .stroke(Color.gray, lineWidth: 1)
                         .frame(width: size * 0.18, height: 1)
                     
-                    Spacer().frame(width: 20)
+                    Spacer()
                     
                     Text("Or continue with")
                         .foregroundColor(Color.gray)
                     
-                    Spacer().frame(width: 20)
+                    Spacer()
                     
                     LineShape()
                         .stroke(Color.gray, lineWidth: 1)
                         .frame(width: size * 0.18, height: 1)
                 }
+                
+//                TextField("Email address", text: $email, onEditingChanged: { isEditing in
+//                    if !isEditing {
+//                        isEmailValid = Validator.isValidEmail(email)
+//                    }
+//                })
+                TextField("Email address", text: $email)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                    .onChange(of: email, { new, old in
+                        isEmailValid = Validator.isValidEmail(email)
+                    })
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).stroke(isEmailValid ? Color.gray : Color.red))
+                
+                TextField("Password", text: $password)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
+                
+                Button(action: {
+                    print("Text Clicked!")
+                }) {
+                    Text("Forgot password?")
+                        .foregroundColor(Color.black)
+                        .underline()
+                }
                 .padding()
+                
+                Button(action: {}) {
+                    Text("Continue").foregroundColor(Color.white)
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.black)
+                .cornerRadius(12)
+                .padding(.bottom, 20)
             }
+            .padding(.horizontal, 20)
             .background(Color.white)
             .cornerRadius(20)
             .shadow(radius: 5)
@@ -82,4 +124,11 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+}
+
+struct Validator {
+    static func isValidEmail(_ email: String) -> Bool {
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}")
+        return emailPredicate.evaluate(with: email)
+    }
 }

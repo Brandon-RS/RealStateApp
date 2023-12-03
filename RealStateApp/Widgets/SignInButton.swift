@@ -22,8 +22,7 @@ struct SignInButton: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, 18)
             .background(Color.gray.opacity(0.5))
-            .cornerRadius(20)
-            .padding(.horizontal, 20)
+            .cornerRadius(12)
             .padding(.bottom, marginBottom)
         }
     }
